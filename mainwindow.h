@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+#include <QTableWidget>
 #include <QChar>
 #include <QMap>
 
@@ -25,7 +26,12 @@ private:
 
     void setupSignals() const;
 
+    QVector<QChar> getSortedKeys(const QMap<QChar, int>& map) const;
+    QVector<QChar> getKeysIntersection(const QMap<QChar, int>& first, const QMap<QChar, int>& second) const;
+
     void calculateFrequency(const QString& text, QMap<QChar, int>& map) const;
+
+    void displayTable(const QMap<QChar, int>& frequency, QTableWidget* table, std::initializer_list<QString> tables) const;
     void displayResult() const;
 private slots:
     void recalculateFrequency();

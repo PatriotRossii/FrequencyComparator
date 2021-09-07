@@ -28,7 +28,17 @@
        </layout>
       </item>
       <item>
-       <widget class="QTableWidget" name="result_tbl"/>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QTableWidget" name="first_tbl"/>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="second_tbl"/>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="delta_tbl"/>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
